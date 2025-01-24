@@ -89,3 +89,180 @@ body{
 #sair:hover{
     background-color: rgb(223, 223, 223);
 }
+
+/* Fundo do modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+  
+  /* Conteúdo do modal */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: left;
+    position: relative;
+    
+}
+  
+  /* Botão de fechar */
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+  /* Estilização do formulário */
+.modalContudosDados label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+  
+.modalContudosDados input, 
+.modalContudosDados textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.modalContudosDados button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.modalContudosDados button:hover {
+    background-color: #0056b3;
+}
+
+.endereçoEstadoCidade{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#formComRolagem {
+    overflow-y: auto; 
+    padding-right: 10px;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: auto; /* Permite que o conteúdo se ajuste ao tamanho do dispositivo */
+    }
+
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 10px;
+    }
+
+    .titulo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    #tituloLogoJobCabecalho {
+        font-size: 16px;
+    }
+
+    #tituloLogoOnCabecalho {
+        font-size: 28px;
+    }
+
+    .adicionarSairJob {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #adicionarJob,
+    #sair {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* Modal */
+    .modal-content {
+        width: 90%; /* Reduz a largura do modal em telas menores */
+        padding: 15px;
+    }
+
+    /* Formulário */
+    .modalContudosDados label {
+        font-size: 14px;
+    }
+
+    .modalContudosDados input,
+    .modalContudosDados textarea {
+        font-size: 14px;
+    }
+
+    .modalContudosDados button {
+        width: 100%; /* Botões em largura total para melhorar a usabilidade */
+        padding: 8px;
+    }
+
+    /* Barra de rolagem no formulário */
+    #formComRolagem {
+        max-height: 600px; /* Ajusta a altura máxima do conteúdo rolável */
+        padding-right: 5px;
+    }
+
+    .endereçoEstadoCidade {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cabecalho,
+    .modal {
+        border-radius: 0; /* Remove bordas arredondadas para usar toda a largura */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes ainda mais específicos para dispositivos muito pequenos */
+    #tituloLogoOnCabecalho {
+        font-size: 22px;
+    }
+
+    #tituloLogoJobCabecalho {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        font-size: 14px;
+    }
+
+    .modalContudosDados button {
+        font-size: 12px;
+    }
+
+    .cabecalho {
+        padding: 5px;
+    }
+}
+

@@ -16,11 +16,85 @@
 
         <div class="adicionarSairJob">
 
-            <button id="adicionarJob">Adicionar Job</button>
+            <button type="submit" id="adicionarJob">Criar Oferta Job</button>
            
             <button id="sair">Sair</button> 
         </div>
     </header>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="fechar">x</span>
+            <form id="formComRolagem" class="modalContudosDados">
+                 
+                <!-- Nome da Vaga -->
+                <label for="nomeDaVaga">Título da Vaga:</label>
+                <input 
+                    type="text" 
+                    id="nomeDaVaga" 
+                    placeholder="Ex: Cortar grama" 
+                    required 
+                />
+
+                <!-- Descrição -->
+                <label for="descricaoVaga">Descrição da Vaga:</label>
+                <textarea 
+                    id="descricaoVaga" 
+                    placeholder="Descreva as responsabilidades e os requisitos da vaga" 
+                    rows="4" 
+                    required
+                ></textarea>
+
+                 <!-- Endereço -->
+
+                <div class="endereçoEstadoCidade">
+                    <div class="estado">
+                        <label for="estado">Estado:</label>
+                        <input 
+                            type="text" 
+                            id="estadoVaga" 
+                            placeholder="Digite o estado da vaga"
+                            required 
+                        />
+                    </div>
+                    
+
+                    <div class="cidade">
+                        <label for="cidade">Cidade:</label>
+                        <input 
+                            type="text" 
+                            id="cidadeVaga" 
+                            placeholder="Digite a cidade da vaga"
+                            required 
+                        />
+                    </div>
+
+                </div>
+              
+                
+
+                <!-- Alternativa de Localização -->
+                <div class="localizacao-externa">
+                    <label for="localizar">localização para usuario encontrar a vaga:</label>
+                    <button type="button" id="localizar" class="btn-localizacao">
+                    <span class="icone-localizacao">📍</span> localização da Vaga
+                    </button>
+                </div>
+
+
+                <!-- Telefone -->
+                <label for="telefone">Telefone/whatsapp (opcional):</label>
+                <input 
+                    type="tel" 
+                    id="telefone" 
+                    placeholder="(DDD) 99999-9999" 
+                />
+
+                    <!-- Botão de Enviar -->
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
 
     <div class="conteudo">
 
@@ -28,6 +102,7 @@
     </div>
     
     <script type="module" src="/js/conteudo.js"></script>
+    <script type="module" src="/js/modalCriarVaga.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js"></script>
 </body>

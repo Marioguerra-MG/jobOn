@@ -73,13 +73,15 @@
               
                 
 
-                <!-- Alternativa de Localização -->
+                <!-- Alternativa de Localização 
                 <div class="localizacao-externa">
                     <label for="localizar">localização para usuario encontrar a vaga:</label>
                     <button type="button" id="localizar" class="btn-localizacao">
                     <span class="icone-localizacao">📍</span> localização da Vaga
                     </button>
                 </div>
+
+                -->
 
 
                 <!-- Telefone -->
@@ -96,14 +98,23 @@
         </div>
     </div>
 
-    <div class="conteudo">
+    <div class="conteinerConteudo" >
+        <div class="menu">
+            <h1>...</h1>
+        </div>
+        
 
-       
+        <div class="conteudo">
+            <!-- As vagas serão carregadas aqui dinamicamente -->
+        </div>
+        
     </div>
     
     <script type="module" src="/js/conteudo.js"></script>
     <script type="module" src="/js/modalCriarVaga.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js"></script>
     <script type="module" src="https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js"></script>
+
 </body>
 </html>
